@@ -3,7 +3,7 @@ ansible-linux-motd
 
 [![Build Status](https://travis-ci.org/jackson-t/ansible-linux-motd.svg?branch=master)](https://travis-ci.org/jackson-t/ansible-linux-motd)
 
-This ansible role is based off of yboetz [motd repo](http://www.jetbrains.com/). 
+This ansible role is based off of yboetz [motd repo](https://github.com/yboetz/motd). 
 The scripts have been updated to work with both Ubuntu and CentOS distributions.
 
 During the installation of this role ruby, figlet, and lolcat will be installed to enhance
