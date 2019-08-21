@@ -29,6 +29,18 @@
     force: true
   with_items: "{{ motd_files }}"
 
+- name: Get all files currently in motd folder
+  command: find -L /usr/local/bin/motd-scripts/ -maxdepth 1 -type f -printf '%f\n'
+  register: current_file_list
+  changed_when: false
+
+- name: Delete any old MOTD files
+  file:
+    path: "/usr/local/bin/motd-scripts/{{ item }}"
+    state: absent
+  with_items: "{{ current_file_list.stdout_lines }}"
+  when: item not in motd_files
+
 - name: Install Login Script
   template:
     src: "templates/login-info.j2"
@@ -36,4 +48,3 @@
     owner: root
     group: root
     mode: 0755
-  with_items: "{{ motd_files }}"
