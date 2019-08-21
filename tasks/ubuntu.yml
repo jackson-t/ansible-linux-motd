@@ -19,7 +19,7 @@
   with_items: "{{ motd_files }}"
 
 - name: Get all files currently in motd folder
-  command: find /etc/update-motd.d/ -maxdepth 1 -type f -printf '%f\n'
+  command: find -L /etc/update-motd.d/ -maxdepth 1 -type f -printf '%f\n'
   register: current_file_list
   changed_when: false
 
