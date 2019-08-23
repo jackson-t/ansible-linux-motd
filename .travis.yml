@@ -11,12 +11,12 @@ services:
   - docker
 install:
   - pip install --upgrade pip virtualenv virtualenvwrapper
-  - virtualenv ansible$ANSIBLE_VERSION
-  - source ansible$ANSIBLE_VERSION/bin/activate
+  - virtualenv ~/ansible$ANSIBLE_VERSION
+  - source ~/ansible$ANSIBLE_VERSION/bin/activate
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
   - pip install molecule docker
 script:
-  - source ansible$ANSIBLE_VERSION/bin/activate
+  - source ~/ansible$ANSIBLE_VERSION/bin/activate
   - molecule --version
   - ansible --version
   - molecule test
