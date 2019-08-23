@@ -32,7 +32,7 @@ passed in as parameters) is always nice for users too:
 
     - hosts: servers
       roles:
-         - { role: ansible-linux-motd }
+         - { role: jackson_t.ansible-linux-motd }
 
 License
 -------

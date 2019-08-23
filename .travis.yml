@@ -15,6 +15,10 @@ install:
   - source ~/ansible$ANSIBLE_VERSION/bin/activate
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
   - pip install molecule docker
+before_script:
+  - cd ../
+  - mv ansible-linux-motd jacksont_t.ansible-linux-motd
+  - cd jacksont_t.ansible-linux-motd
 script:
   - source ~/ansible$ANSIBLE_VERSION/bin/activate
   - molecule --version
