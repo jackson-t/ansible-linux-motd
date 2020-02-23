@@ -14,7 +14,7 @@ install:
   - virtualenv ~/ansible$ANSIBLE_VERSION
   - source ~/ansible$ANSIBLE_VERSION/bin/activate
   - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
-  - pip install molecule docker ansible-lint pytest
+  - pip install molecule docker ansible-lint pytest testinfra
 before_script:
   - cd ../
   - mv ansible-linux-motd jackson_t.ansible-linux-motd
