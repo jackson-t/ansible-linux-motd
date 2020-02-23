@@ -17,8 +17,8 @@ install:
   - pip install molecule docker ansible-lint
 before_script:
   - cd ../
-  - mv ansible-linux-motd jacksont_t.ansible-linux-motd
-  - cd jacksont_t.ansible-linux-motd
+  - mv ansible-linux-motd jackson_t.ansible-linux-motd
+  - cd jackson_t.ansible-linux-motd
 script:
   - source ~/ansible$ANSIBLE_VERSION/bin/activate
   - molecule --version
