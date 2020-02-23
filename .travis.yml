@@ -2,8 +2,8 @@
 language: python
 env:
   - ANSIBLE_VERSION=latest
-  - ANSIBLE_VERSION=2.7.13
-  - ANSIBLE_VERSION=2.6.19
+  - ANSIBLE_VERSION=2.8.8
+  - ANSIBLE_VERSION=2.7.16
 python:
   - "2.7"
   - "3.6"
