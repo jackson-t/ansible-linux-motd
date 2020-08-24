@@ -18,6 +18,7 @@
   file:
     path: /usr/local/bin/motd-scripts
     state: directory
+    mode: 0755
 
 - name: Install new MOTD files
   template:
